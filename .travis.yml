@@ -8,6 +8,7 @@ before_install:
   - brew install lz4
 
 script:
+  - git tag
   - ls -l /usr/local/lib/*lz* 
 
 deploy:
