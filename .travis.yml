@@ -7,6 +7,9 @@ before_install:
   #- brew update 
   - brew install lz4
 
+script:
+  - ls -l /usr/local/lib/*lz* 
+
 deploy:
   provider: releases
   api_key: "75d8ced804cac4d3606a882a38854eeccecef3a6"
