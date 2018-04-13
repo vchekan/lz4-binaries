@@ -4,7 +4,6 @@ osx_image: xcode9.1
 sudo: false
 
 before_install:
-  #- brew update 
   - brew install lz4
 
 script:
@@ -13,7 +12,8 @@ script:
 
 deploy:
   provider: releases
-  api_key: "75d8ced804cac4d3606a882a38854eeccecef3a6"
+  api-key:
+    secure: $GITHUB_TOKEN
   file: "/usr/local/lib/liblz4.1.8.1.dylib"
   skip_cleanup: true
   on:
