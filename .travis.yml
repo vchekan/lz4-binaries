@@ -1,0 +1,16 @@
+language: c
+os: osx # OSX 10.12
+osx_image: xcode9.1
+sudo: false
+
+before_install:
+  #- brew update 
+  - brew install lz4
+
+deploy:
+  provider: releases
+  api_key: "75d8ced804cac4d3606a882a38854eeccecef3a6"
+  file: "/usr/local/lib/liblz4*"
+  skip_cleanup: true
+  on:
+    tags: true
